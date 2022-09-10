@@ -1,7 +1,7 @@
 import React from 'react';
 import SplashScreen from './components/SplashScreen';
 import OfflineOverviewScreen from './components/OfflineOverviewScreen';
-import MaintenanceScreen from './components/MaintenanceScreen';
+// import MaintenanceScreen from './components/MaintenanceScreen';
 import './App.css';
 
 function App() {
