@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+// import { create } from "../../config/firebaseService";
+
 import offlineLogo from '../../assets/imgs/offline-logo.svg';
 import icons from '../../assets/imgs/icons.svg';
 import logoShalom from '../../assets/imgs/logo-shalom.svg';
@@ -15,8 +17,14 @@ export default function OfflineOverviewScreen() {
     setDataForm({ ...dataForm, [name]: value })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    // try {
+    //   await create(dataForm);
+    //   setDataForm({ name: '', email: '', phoneNumber: ''});
+    // } catch (error) {
+    //   console.log(error)
+    // }
   }
 
   return (
