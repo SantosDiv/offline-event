@@ -1,0 +1,55 @@
+.offline-overview-container {
+  background-color: #F7F9EB;
+  height: 100vh;
+}
+
+.offline-logo {
+  height: 45px;
+  margin-top: 2.5em;
+}
+
+.offline-subtitle {
+  font-size: 17px;
+  letter-spacing: 5px;
+}
+
+.icons {
+  height: 20px;
+}
+
+.form-subscription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.form-subscription input {
+  width: 70%;
+  border: none;
+  border-radius: 10px;
+  padding: 1.5em;
+  box-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.15);
+  color: #3c3c3c;
+}
+
+.btn-submit {
+  background-color: #CC5F37;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 1.2em;
+  width: 50%;
+}
+
+.footer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 5em;
+  gap: 10px;
+}
+
+.orange-color {
+  color: #CC5F37;
+}
