@@ -5,10 +5,17 @@ import './style.css';
 
 export default function SplashScreen() {
   const [on, setOn] = useState(true);
+  const [subititle, setSubtitle] = useState('Quer ficar off? Pressione o power!');
+
 
   const turnOff = () => {
-    setOn(false);
-    window.location.replace("/#offline-overview-container")
+    setSubtitle("Ficando off. Aguarde...");
+    setTimeout(() => {
+      setOn(false);
+      window.location.replace("/#offline-overview-container");
+      setSubtitle("Volto em três dias :)");
+
+    }, 1000);
   }
 
   return (
@@ -19,7 +26,7 @@ export default function SplashScreen() {
           { on ? "ON" : "OFF" }
         </span>
         <div className="box-subititle">
-          <p className="text-splash">Quer ficar off? Pressione o power!</p>
+          <p className="text-splash">{subititle}</p>
         </div>
       </main>
     </div>
