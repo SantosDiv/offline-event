@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 // import { create } from "../../config/firebaseService";
+// import { GoogleSpreadsheet } from "google-spreadsheet";
 
 import offlineLogo from '../../assets/imgs/offline-logo.svg';
 import icons from '../../assets/imgs/icons.svg';
@@ -8,24 +9,24 @@ import instagramLogo from '../../assets/imgs/instagram-logo.svg';
 import './style.css'
 
 export default function OfflineOverviewScreen() {
-  const INITAL_STATE = { name: '', email: '', phoneNumber: '' };
-  const [dataForm, setDataForm] = useState(INITAL_STATE);
+  // const INITAL_STATE = { name: '', email: '', phoneNumber: '' };
+  // const [dataForm, setDataForm] = useState(INITAL_STATE);
 
-  const handleChange = (e) => {
-    const { value, name } = e.target;
+  // const handleChange = (e) => {
+  //   const { value, name } = e.target;
 
-    setDataForm({ ...dataForm, [name]: value })
-  }
+  //   setDataForm({ ...dataForm, [name]: value })
+  // }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    // try {
-    //   await create(dataForm);
-    //   setDataForm({ name: '', email: '', phoneNumber: ''});
-    // } catch (error) {
-    //   console.log(error)
-    // }
-  }
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+
+  //     setDataForm({ name: '', email: '', phoneNumber: ''});
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
 
   return (
     <main className="offline-overview-container" id="offline-overview-container">
@@ -41,7 +42,7 @@ export default function OfflineOverviewScreen() {
         <h1 className="orange-color">14 a 16 de outubro</h1>
         <p>Faça agora sua pré-inscrição</p>
 
-        <form className="form-subscription" onSubmit={handleSubmit}>
+        {/* <form className="form-subscription" onSubmit={handleSubmit}>
           <input
             type="text"
             name="name"
@@ -67,7 +68,15 @@ export default function OfflineOverviewScreen() {
             placeholder="Telefone"
           />
           <button type="submit" className="btn-submit">Finalizar</button>
-        </form>
+        </form> */}
+
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSf4_I_VexI5vIYU6fHHKKmgb8dvpTY9uBZ4e9DXimi22eOMqg/viewform?embedded=true"
+          width="640"
+          height="720"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0">Carregando…</iframe>
 
       </main>
 
