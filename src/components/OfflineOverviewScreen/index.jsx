@@ -28,6 +28,13 @@ export default function OfflineOverviewScreen() {
   //   }
   // }
 
+  const widthForm = () => {
+    if (window.screen.width > 1000) {
+      return '640';
+    }
+    return (window.screen.width - window.screen.width * 0.1).toString()
+  }
+
   return (
     <main className="offline-overview-container" id="offline-overview-container">
       <header>
@@ -72,19 +79,21 @@ export default function OfflineOverviewScreen() {
 
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSf4_I_VexI5vIYU6fHHKKmgb8dvpTY9uBZ4e9DXimi22eOMqg/viewform?embedded=true"
-          width="640"
+          width={widthForm()}
           height="720"
-          frameborder="0"
-          marginheight="0"
+          frameBorder="0"
+          marginHeight="0"
           title="form-sves-offline"
-          marginwidth="0">Carregando…</iframe>
+          marginWidth="0">Carregando…</iframe>
 
       </main>
 
       <footer className="footer">
         <img src={logoShalom} alt="Logo da comunidade shalom" height={35} />
         <span>|</span>
-        <img src={instagramLogo} alt="Logo do instagram" height={25}/>
+        <a href="https://www.instagram.com/shalomgoiania/" target="_blank" rel="noopener noreferrer">
+          <img src={instagramLogo} alt="Logo do instagram" height={25}/>
+        </a>
       </footer>
 
     </main>
